@@ -1,14 +1,20 @@
 <?php
+echo "==== SIMULADOR DE EMPRÉSTIMO ====" . PHP_EOL;
 
-echo"==== SIMIULADOR DE EMPRESTIMO BANCARIO";
+$idade = readline("Digite sua idade: ");
+$salario = readline("Digite seu salário: ");
+$parcela = readline("Digite o valor da parcela: ");
 
-echo PHP_EOL;
+$limite = $salario * 0.30;
 
-$idade = readline("Digite sua IDADE: ");
-$salario = readline("Digite seu SALÁRIO: ");
-$parcela = readline("Digite o VALOR da PARCELA: ");
-
-if($idade >= 18 && $parcela < $salario / 100 * 30 ){
+if ($idade >= 18) {
     
+    if ($parcela <= $limite) {
+        echo "Empréstimo aprovado!" . PHP_EOL;
+    } else {
+        echo "Empréstimo negado: parcela maior que 30% do salário." . PHP_EOL;
+    }
+
+} else {
+    echo "Empréstimo negado: menor de idade." . PHP_EOL;
 }
-    
