@@ -1,0 +1,14 @@
+<?php
+
+echo"==== SIMIULADOR DE EMPRESTIMO BANCARIO";
+
+echo PHP_EOL;
+
+$idade = readline("Digite sua IDADE: ");
+$salario = readline("Digite seu SALÁRIO: ");
+$parcela = readline("Digite o VALOR da PARCELA: ");
+
+if($idade >= 18 && $parcela < $salario / 100 * 30 ){
+    
+}
+    
