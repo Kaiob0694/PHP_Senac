@@ -3,12 +3,9 @@
 echo "==== TABUADAS ====";
 echo PHP_EOL;
 
-for ($i = 1; $i <= 5; $i++) {
+$numero = readline("Digite qual tabuada: ");
+for ($i = 1; $i <= 10; $i++) {
+    $resultado = $numero * $i;}
+    echo "$nuemro x $i = $resultado";
 
-    for ($j = 1; $j <= 10; $j++) {
-        $resultado = $i * $j;
-        echo "$i x $j = $resultado" . PHP_EOL;
-    }
-
-    echo PHP_EOL;
-}
+    ?>
