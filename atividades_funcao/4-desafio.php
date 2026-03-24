@@ -28,9 +28,30 @@ while ($opcao != 4) {
         echo "---------------------------" . PHP_EOL;
     }
     elseif ($opcao == 2) {
-        $saque = readline("Valor do Saque: \n");
+        $saque = readline("Valor do Saque: ");
         $saldo = $saldo - $saque;
+        echo "---------------------------" . PHP_EOL;
+        echo " Saldo atual: $saldo R$\n";
+        echo "---------------------------" . PHP_EOL;
 
+    }
+        elseif ($opcao == 3) {
+        $deposito = readline("Valor do Deposito: ");
+        $saldo = $saldo + $deposito;
+        echo "---------------------------" . PHP_EOL;
+        echo " Saldo atual: $saldo R$\n";
+        echo "---------------------------" . PHP_EOL;
+
+    }elseif ($opcao == 4) {
+    echo "-------------------------------------" . PHP_EOL;
+    echo " Obrigado por usar o Banco SENAC!\n";
+    echo " Encerrando o sistema...\n";
+    echo "-------------------------------------" . PHP_EOL;
+    
+    }else{
+        echo "-------------------------------------" . PHP_EOL;
+        echo " OPÇÃO INVALIDA, TENTE NOVAMENTE\n";
+        echo "-------------------------------------" . PHP_EOL;
     }
 }
 
