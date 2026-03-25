@@ -31,3 +31,18 @@ class Aluno{
         echo "Situação: " . $this ->verificarSituacao() .  "\n";
     }
 }
+
+$aluno1 = new aluno();
+echo "Digite o nome do Aluno:  ";
+$aluno1 -> nome =  trim(fgets(STDIN));
+
+echo "Digite a Primeira NOTA:  ";
+$aluno1 -> nota1 =  trim(fgets(STDIN));
+
+echo "Digite a Segunda NOTA:  ";
+$aluno1 -> nota2 =  trim(fgets(STDIN));
+
+
+
+echo "\n RESULTADO: \n";
+$aluno1 -> exibirDados();
