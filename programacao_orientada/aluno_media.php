@@ -11,8 +11,14 @@ class Aluno {
         return ($this->nota1 + $this->nota2) / 2;
     }
 
-    public function verificarSituacao() {
-        return $this->calcularMedia() >= 7 ? "APROVADO" : "REPROVADO";
+        public function verificarSituacao(){
+        $media=  $this-> calcularMedia();
+
+        if($media >= 7){
+            return "APROVADO";
+        }else{
+            return "REPROVADO";
+        }
     }
 
     public function exibirDados() {
@@ -36,7 +42,7 @@ while (true) {
 
     switch ($opcao) {
 
-        // ✅ CADASTRAR
+        
         case 1:
             $aluno = new Aluno();
 
@@ -54,7 +60,7 @@ while (true) {
             echo "Aluno cadastrado!\n";
             break;
 
-        // ✅ LISTAR
+        
         case 2:
             if (count($alunos) == 0) {
                 echo "Nenhum aluno cadastrado.\n";
@@ -65,7 +71,7 @@ while (true) {
             }
             break;
 
-        // ✅ SAIR
+        
         case 3:
             echo "Encerrando...\n";
             exit;
